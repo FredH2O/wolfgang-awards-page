@@ -1,3 +1,6 @@
+import logo from "../assets/images/wolfgang_digital_logo.png";
+import contactImage from "../assets/images/contact-us.jpg";
+
 function Header() {
   return (
     <header className="flex items-center justify-between px-6 py-5 text-green-950 lg:px-10">
@@ -7,7 +10,7 @@ function Header() {
         aria-label="Wolfgang Digital home"
       >
         <img
-          src="/images/wolfgang_digital_logo.png"
+          src={logo}
           alt="Wolfgang Logo"
           className="h-10 w-10 rounded-full bg-green-950 object-cover"
         />
@@ -59,7 +62,7 @@ function Header() {
         </a>
 
         <img
-          src="../images/contact-us.jpg"
+          src={contactImage}
           alt=""
           className="hidden h-11 w-11 rounded-full bg-lime-300 object-cover sm:block"
         />

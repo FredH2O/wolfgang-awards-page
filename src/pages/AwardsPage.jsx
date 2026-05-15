@@ -5,7 +5,7 @@ function AwardsPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="py-20 px-10 md:px-10 lg:px-25">
         <AwardsSection />
       </main>
     </>
