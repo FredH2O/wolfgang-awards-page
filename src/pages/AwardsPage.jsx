@@ -6,9 +6,11 @@ function AwardsPage() {
   return (
     <div className="relative">
       <Header />
-      <Hero />
-      <main className="py-20 px-10 md:px-10 lg:px-25">
+
+      <main>
+        <Hero />
         <AwardsSection />
+        <div className="px-10 py-20 md:px-10 lg:px-25"></div>
       </main>
     </div>
   );

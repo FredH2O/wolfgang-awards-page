@@ -2,7 +2,7 @@ import heroImage from "../assets/images/hero-image.jpg";
 
 function Hero() {
   return (
-    <section className="relative min-h-[70vh] overflow-hidden rounded-b-[2rem] text-white">
+    <section className="relative min-h-[70vh] overflow-hidden rounded-b-4xl text-white">
       {" "}
       <div className="relative">
         <img

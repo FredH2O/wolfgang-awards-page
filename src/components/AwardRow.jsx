@@ -1,61 +1,112 @@
+import { useState } from "react";
+import HoverPreview from "./HoverPreview";
+
 function AwardRow({ award }) {
+  const [preview, setPreview] = useState({
+    isVisible: false,
+    x: 0,
+    y: 0,
+    rotate: 0,
+  });
+
+  function handleMouseMovement() {
+    const row = event.currentTarget;
+    const rowRect = row.getBoundingClientRect();
+
+    const rowCenter = rowRect.left + rowRect.width / 2;
+    const cursorDistanceFromCenter = event.clientX - rowCenter;
+    const rotationAmount = cursorDistanceFromCenter / rowRect.width;
+
+    setPreview({
+      isVisible: true,
+      x: event.clientX,
+      y: event.clientY,
+      rotate: rotationAmount * 20,
+    });
+  }
+
   return (
-    <article className="group border-t border-green-950/15 py-10 transition-colors duration-300 hover:border-green-950">
-      <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-6 lg:items-start">
-        {/* Award logo */}
-        <div className="flex items-center gap-5 md:col-span-3 lg:col-span-3">
-          <div className="flex h-28 w-36 items-center justify-center rounded-xl bg-neutral-100 p-4 transition-transform duration-300 group-hover:-translate-y-1 md:col-span-1">
-            {award.image ? (
-              <img
-                src={award.image}
-                alt={award.imageAlt}
-                className="max-h-full max-w-full object-contain"
-              />
-            ) : (
-              <span className="text-center text-xs font-bold uppercase text-green-950/50">
-                Award Logo
-              </span>
-            )}
-          </div>
+    <article
+      onMouseMove={handleMouseMovement}
+      onMouseEnter={() =>
+        setPreview((currentPreview) => ({
+          ...currentPreview,
+          isVisible: true,
+        }))
+      }
+      onMouseLeave={() =>
+        setPreview((currentPreview) => ({
+          ...currentPreview,
+          isVisible: false,
+        }))
+      }
+      className="group -mx-10 transition-colors duration-300 hover:bg-green-900 hover:text-white md:-mx-10 lg:-mx-20"
+    >
+      <HoverPreview
+        image={award.cursorImage}
+        imageAlt={award.imageAlt}
+        preview={preview}
+      />
+      <div className="px-6 md:px-10 lg:px-20">
+        <div className="border-t border-green-950/15 transition-colors duration-300 group-hover:border-white/20" />
 
-          {/* Award group */}
-          <div className="flex min-h-28 items-center md:col-span-2">
-            <h3 className="text-2xl font-black uppercase tracking-tight md:text-3xl">
-              {award.group}
-            </h3>
-          </div>
-        </div>
+        <div className="grid gap-8 py-10 md:grid-cols-3 lg:grid-cols-6 lg:items-start">
+          {/* Award logo and group */}
+          <div className="flex items-center gap-5 md:col-span-3 lg:col-span-3">
+            <div className="flex h-28 w-36 items-center justify-center rounded-xl bg-neutral-100 p-4 transition-transform duration-300 group-hover:-translate-y-1">
+              {award.image ? (
+                <img
+                  src={award.image}
+                  alt={award.imageAlt}
+                  className="max-h-full max-w-full object-contain"
+                />
+              ) : (
+                <span className="text-center text-xs font-bold uppercase text-green-950/50">
+                  Award Logo
+                </span>
+              )}
+            </div>
 
-        {/* Category, award result, and year */}
-        <div className="grid grid-cols-6 gap-3 text-xs md:col-span-3 md:gap-6 md:text-sm lg:col-span-3">
-          <div className="col-span-4">
-            <p className="mb-3 text-xs text-green-950/45 md:text-sm">
-              Category
-            </p>
-
-            <div className="space-y-1">
-              {award.categories.map((category) => (
-                <p key={category.name} className="font-medium">
-                  {category.name}
-                </p>
-              ))}
+            <div className="flex min-h-28 items-center">
+              <h3 className="text-2xl font-black uppercase tracking-tight md:text-3xl">
+                {award.group}
+              </h3>
             </div>
           </div>
 
-          <div className="col-span-1">
-            <p className="mb-3 text-xs md:text-sm text-green-950/45">Awards</p>
+          {/* Category, award result, and year */}
+          <div className="grid grid-cols-6 gap-3 text-xs md:col-span-3 md:gap-6 md:text-sm lg:col-span-3">
+            <div className="col-span-4">
+              <p className="mb-3 text-xs text-green-950/45 transition-colors duration-300 group-hover:text-white/60 md:text-sm">
+                Category
+              </p>
 
-            <div className="space-y-1">
-              {award.categories.map((category) => (
-                <p key={category.name} className="font-medium">
-                  {category.result}
-                </p>
-              ))}
+              <div className="space-y-1">
+                {award.categories.map((category) => (
+                  <p key={category.name} className="font-medium">
+                    {category.name}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="col-span-1">
-            <p className="font-bold">{award.year}</p>
+            <div className="col-span-1">
+              <p className="mb-3 text-xs text-green-950/45 transition-colors duration-300 group-hover:text-white/60 md:text-sm">
+                Awards
+              </p>
+
+              <div className="space-y-1">
+                {award.categories.map((category) => (
+                  <p key={category.name} className="font-medium">
+                    {category.result}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            <div className="col-span-1">
+              <p className="font-bold">{award.year}</p>
+            </div>
           </div>
         </div>
       </div>
