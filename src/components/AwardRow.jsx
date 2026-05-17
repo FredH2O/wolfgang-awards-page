@@ -40,14 +40,14 @@ function AwardRow({ award }) {
           isVisible: false,
         }))
       }
-      className="group cursor-none -mx-10 transition-colors duration-300 hover:bg-emerald-900 hover:text-white md:-mx-10 lg:-mx-20"
+      className="group cursor-none -mx-4 transition-colors duration-300 hover:bg-emerald-900 hover:text-white md:-mx-10 lg:-mx-20"
     >
       <HoverPreview
         image={award.cursorImage}
         imageAlt={award.imageAlt}
         preview={preview}
       />
-      <div className="px-6 md:px-10 lg:px-20">
+      <div className="px-4 md:px-10 lg:px-20">
         <div className="border-t border-green-950/15 transition-colors duration-300 group-hover:border-white/20" />
 
         <div className="grid gap-8 py-10 md:grid-cols-3 lg:grid-cols-6 lg:items-start">

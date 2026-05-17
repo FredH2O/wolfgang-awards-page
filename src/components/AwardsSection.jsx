@@ -15,9 +15,9 @@ function AwardsSection() {
       : awards.filter((award) => award.group === selectedGroup);
 
   return (
-    <section className="px-6 py-16 text-green-950 md:px-10 md:py-20 lg:px-20">
-      <div className="mb-16 grid gap-8 md:mb-20 lg:mb-24 lg:grid-cols-[1fr_auto] lg:items-end">
-        <h2 className="max-w-5xl text-3xl font-black uppercase leading-none tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+    <section className="px-6 pt-10 text-green-950 md:px-10 md:pt-10 lg:pt-20 lg:px-20">
+      <div className="mb-16 grid gap-8 md:mb-20 lg:mb-24 xl:grid-cols-[1fr_auto] lg:items-end">
+        <h2 className="max-w-5xl text-3xl font-black uppercase leading-none tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">
           Six-time best global large agency, delivering award-winning strategy,
           creativity, and performance worldwide.
         </h2>
