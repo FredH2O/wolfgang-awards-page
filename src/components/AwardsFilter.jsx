@@ -14,7 +14,7 @@ function AwardsFilter({ selectedGroup, awardGroups, onGroupChange }) {
           name="award-group"
           value={selectedGroup}
           onChange={(event) => onGroupChange(event.target.value)}
-          className="border-1 rounded-full py-3 pl-5 pr-10 w-full appearance-none bg-white border-green-950"
+          className="border-2 rounded-full py-3 pl-5 pr-10 w-full appearance-none bg-white border-green-950"
         >
           <option value="All">All Awards</option>
 
