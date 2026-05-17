@@ -41,7 +41,7 @@ function AwardsSection() {
 
           return (
             <div key={year}>
-              <div className="mb-8 inline-flex rounded-full bg-lime-300 px-5 py-2 text-sm font-bold">
+              <div className="mb-8 inline-flex rounded-full bg-lime-200 border-lime-300 px-5 py-2 text-sm font-bold">
                 {year}
               </div>
 

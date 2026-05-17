@@ -9,7 +9,7 @@ function AwardRow({ award }) {
     rotate: 0,
   });
 
-  function handleMouseMovement() {
+  function handleMouseMovement(event) {
     const row = event.currentTarget;
     const rowRect = row.getBoundingClientRect();
 
@@ -21,7 +21,7 @@ function AwardRow({ award }) {
       isVisible: true,
       x: event.clientX,
       y: event.clientY,
-      rotate: rotationAmount * 20,
+      rotate: rotationAmount * 25,
     });
   }
 
@@ -40,7 +40,7 @@ function AwardRow({ award }) {
           isVisible: false,
         }))
       }
-      className="group -mx-10 transition-colors duration-300 hover:bg-green-900 hover:text-white md:-mx-10 lg:-mx-20"
+      className="group cursor-none -mx-10 transition-colors duration-300 hover:bg-emerald-900 hover:text-white md:-mx-10 lg:-mx-20"
     >
       <HoverPreview
         image={award.cursorImage}
@@ -53,7 +53,7 @@ function AwardRow({ award }) {
         <div className="grid gap-8 py-10 md:grid-cols-3 lg:grid-cols-6 lg:items-start">
           {/* Award logo and group */}
           <div className="flex items-center gap-5 md:col-span-3 lg:col-span-3">
-            <div className="flex h-28 w-36 items-center justify-center rounded-xl bg-neutral-100 p-4 transition-transform duration-300 group-hover:-translate-y-1">
+            <div className="flex h-28 w-36 items-center justify-center rounded-xl bg-neutral-100 group-hover:bg-emerald-800 p-4 transition-transform duration-300 group-hover:-translate-y-1">
               {award.image ? (
                 <img
                   src={award.image}
