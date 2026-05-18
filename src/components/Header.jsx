@@ -58,7 +58,7 @@ function Header() {
       <div className="flex items-center gap-4">
         <a
           href=""
-          className="rounded-full border border-green-950 px-5 py-2 text-sm font-semibold transition-colors hover:bg-green-950 hover:text-white"
+          className="rounded-full border border-lime-500 px-5 py-2 text-sm font-semibold transition-all hover:-translate-y-1 ease-in-out duration-300 hover:text-white"
         >
           Contact Us
         </a>
