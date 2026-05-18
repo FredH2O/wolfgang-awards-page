@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
 import FinalCTA from "../components/FinalCTA";
+import Footer from "../components/Footer/Footer";
 
 function AwardsPage() {
   return (
@@ -18,6 +19,7 @@ function AwardsPage() {
           <NewsCarousel />
         </div>
         <FinalCTA />
+        <Footer />
       </main>
     </div>
   );

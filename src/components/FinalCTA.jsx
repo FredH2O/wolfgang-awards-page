@@ -39,7 +39,7 @@ function FinalCTA() {
 
                   <img
                     src={contactImage}
-                    className="hidden h-11 w-11 rounded-full object-cover sm:block"
+                    className="h-11 w-11 rounded-full object-cover"
                   />
                 </div>
               </div>
