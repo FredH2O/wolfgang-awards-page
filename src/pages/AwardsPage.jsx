@@ -3,6 +3,7 @@ import AwardsSection from "../components/AwardsSection";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import NewsCarousel from "../components/NewsCarousel/NewsCarousel";
+import FinalCTA from "../components/FinalCTA";
 
 function AwardsPage() {
   return (
@@ -16,6 +17,7 @@ function AwardsPage() {
           <ContactSection />
           <NewsCarousel />
         </div>
+        <FinalCTA />
       </main>
     </div>
   );

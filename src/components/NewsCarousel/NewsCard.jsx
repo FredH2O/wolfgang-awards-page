@@ -3,11 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 function NewsCard({ post }) {
   return (
     <article
-      className="relative flex text-white flex-col 
-    justify-between h-150 p-6 rounded-2xl border overflow-hidden"
+      className="relative cursor-pointer group flex text-white flex-col 
+    justify-between h-150 p-6 rounded-2xl border overflow-hidden "
     >
       <img
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-all duration-300 ease-in-out"
         src={post.image}
         alt={post.author}
       />
