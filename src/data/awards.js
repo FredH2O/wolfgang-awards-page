@@ -1,11 +1,11 @@
-import globalSearchCursorImage from "../assets/images/global-search-cursor-image.jpg";
-import globalSearchLogoImage from "../assets/images/global-search-award-logo.png";
-import globalSocialMediaImage from "../assets/images/global-social-media-cursor-image.jpg";
-import globalSocialMediaAwardsLogo from "../assets/images/global-social-media-awards-logo.png";
-import digitalMediaAwardLogo from "../assets/images/digital-media-awards-logo.png";
-import digitalMediaCursorImage from "../assets/images/digital-media-awards-cursor-image.jpg";
-import greatPlaceToWorkLogo from "../assets/images/great-place-to-work-logo.png";
-import greatPlaceToWorkCursorImage from "../assets/images/great-place-to-work-cursor-image.jpg";
+import globalSearchCursorImage from "../assets/images/awards/global-search-cursor-image.jpg";
+import globalSearchLogoImage from "../assets/images/awards/global-search-award-logo.png";
+import globalSocialMediaImage from "../assets/images/awards/global-social-media-cursor-image.jpg";
+import globalSocialMediaAwardsLogo from "../assets/images/awards/global-social-media-awards-logo.png";
+import digitalMediaAwardLogo from "../assets/images/awards/digital-media-awards-logo.png";
+import digitalMediaCursorImage from "../assets/images/awards/digital-media-awards-cursor-image.jpg";
+import greatPlaceToWorkLogo from "../assets/images/awards/great-place-to-work-logo.png";
+import greatPlaceToWorkCursorImage from "../assets/images/awards/great-place-to-work-cursor-image.jpg";
 export const awards = [
   {
     id: "global-search-awards-2025",

@@ -1,4 +1,4 @@
-import formImage from "../assets/images/global-social-media-cursor-image.jpg";
+import formImage from "../assets/images/awards/global-social-media-cursor-image.jpg";
 import ContactForm from "./ContactForm";
 
 function ContactSection() {

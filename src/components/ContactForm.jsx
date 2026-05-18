@@ -151,7 +151,7 @@ function ContactForm() {
 
         <button
           type="submit"
-          className="rounded-2xl bg-lime-300 px-6 py-4 font-bold text-green-950 transition-colors hover:bg-white"
+          className="rounded-2xl cursor-pointer bg-lime-300 px-6 py-4 font-bold text-green-950 transition-colors hover:bg-white"
         >
           Submit
         </button>
