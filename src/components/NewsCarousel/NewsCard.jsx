@@ -11,7 +11,7 @@ function NewsCard({ post }) {
         src={post.image}
         alt={post.author}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/70" />
       {/* Top */}
       <div className="flex items-center justify-start gap-3 text-sm z-10">
         <p className="font-medium">{post.author}</p>
